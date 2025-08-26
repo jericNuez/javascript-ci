@@ -1,0 +1,21 @@
+# name of the workflow
+name: CI
+
+# trigger the workflow on push to master
+on:
+  push:
+    branches: [master]
+  # pull_request:
+  #   branches: [master]
+
+# define the job
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      # checkout the repository
+      - uses: actions/checkout@v3
+      # install dependencies
+      - run: npm install
+      # run the tests
+      - run: npm run test
