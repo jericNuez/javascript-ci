@@ -4,7 +4,7 @@ name: CI
 # trigger the workflow on push to master
 on:
   push:
-    branches: [master]
+    branches: [celine-dev]
   # pull_request:
   #   branches: [master]
 
